@@ -60,11 +60,13 @@ if st.button("Generate Download Link"):
                 ydl_opts = {
                     'format': 'ba[ext=m4a]',
                     'outtmpl': temp_file, 
+                    'http_headers': {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'}
                 }
             else:
                 ydl_opts = {
                     'format': 'bv*[ext=mp4]+ba[ext=m4a]/b[ext=mp4]/best',
                     'outtmpl': temp_file,
+                    'http_headers': {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'}
                 }
             
             # Execute the yt-dlp download to the server first
